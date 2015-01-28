@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 
-	
 	public CoolWeatherOpenHelper(Context context, String name,
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);
@@ -17,7 +16,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
-
+     
 	}
 
 	@Override
