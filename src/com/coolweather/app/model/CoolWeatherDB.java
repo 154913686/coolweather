@@ -19,7 +19,7 @@ public class CoolWeatherDB {
 	CoolWeatherDB(Context context) {
 		CoolWeatherOpenHelper dbHelper = new CoolWeatherOpenHelper(context,
 				DB_NAME, null, VERSION);
-		db = dbHelper.getWritableDatabase();
+		db = dbHelper.getWritableDatabase();//第一次调用会创建数据库
 	}
 
 	public synchronized static CoolWeatherDB getInstance(Context context) {
@@ -61,7 +61,7 @@ public class CoolWeatherDB {
 			ContentValues values = new ContentValues();
 			values.put("city_name", city.getCityName());
 			values.put("city_code", city.getCityCode());
-			values.put("province_id", city.getCityCode());
+			values.put("province_id", city.getProvinceId());
 			db.insert("City", null, values);
 		}
 	}
